@@ -13,23 +13,42 @@ namespace C1StudioArea
             double pi = Math.PI;
             double area;
             double r;
-            string input;
 
-            Console.WriteLine("Let's calculate the area of a circle\n\nPlease enter the radius:");
-            input = Console.ReadLine();
-            r = int.Parse(input);
+            //Console.WriteLine("Let's calculate the area of a circle\n\nPlease enter the radius:");
+            //r = double.Parse(Console.ReadLine());
 
-            while (r < 0)
+            //while (r < 0)
+            //{
+            //    Console.WriteLine("A circle can't have a negative radius. Please enter a positive number:");
+            //    r = double.Parse(Console.ReadLine());
+            //}
+
+            //area = pi * Math.Pow(r, 2);
+
+            //Console.WriteLine("The area of a circle with a radius of " + r + " is " + area);
+            //Console.ReadLine();
+
+
+            string input = "";
+            do
             {
-                Console.WriteLine("A circle can't have a negative radius. Please enter a positive number:");
+                Console.Write("Let's calculate the area of a circle\n\nPlease enter the radius: ");
                 input = Console.ReadLine();
-                r = double.Parse(input);
-            }
+                if (!string.IsNullOrEmpty(input) && (double.Parse(input) >= 0))
+                {
+                    r = double.Parse(input);
 
-            area = pi * Math.Pow(r,2);
+                    area = pi * Math.Pow(r, 2);
 
-            Console.WriteLine("The area of a circle with a radius of " + r + " is " + area);
-            Console.ReadLine();
+                    Console.WriteLine("The area of a circle with a radius of " + r + " is " + area);
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Input can't be empty or negative.");
+                }
+            } while (string.IsNullOrEmpty(input) || (double.Parse(input) < 0));
+
 
         }
     }
