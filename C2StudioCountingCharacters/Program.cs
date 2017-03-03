@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Concurrent;
+using System.IO;
 
 namespace C2StudioCountingCharacters
 {
@@ -11,13 +12,14 @@ namespace C2StudioCountingCharacters
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your text: ");
-            string text = Console.ReadLine().ToLower();
+            string text = System.IO.File.ReadAllText(@"lorem.txt");
+            //Console.WriteLine("Enter your text: ");
+            //string text = Console.ReadLine().ToLower();
             ConcurrentDictionary<char, int> alphaCount = new ConcurrentDictionary<char, int>();
             //Dictionary<char, int> alphaCount = new Dictionary<char, int>();
             int currentCount;
-                       
-            foreach(char c in text)
+
+            foreach (char c in text)
             {
                 if (Char.IsLower(c))
                 {
@@ -25,7 +27,7 @@ namespace C2StudioCountingCharacters
                     //alphaCount[c] = currentCount + 1;
                     alphaCount.AddOrUpdate(c, 1, (oldKey, oldValue) => oldValue + 1);
                 }
-               
+
             }
 
             SortedDictionary<char, int> alphaCountSorted = new SortedDictionary<char, int>(alphaCount);
@@ -39,6 +41,8 @@ namespace C2StudioCountingCharacters
             Console.WriteLine(alphaCountString);
             Console.ReadLine();
         }
+
+        
     }
 }
 
