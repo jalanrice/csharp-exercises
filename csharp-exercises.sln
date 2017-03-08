@@ -49,6 +49,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "C3HelloMVC", "C3HelloMVC\C3
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "C3HelloMVCStudio", "C3HelloMVCStudio\C3HelloMVCStudio.xproj", "{DC809267-641A-4605-AC12-CD19758F8DC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C5SimpleClasses", "SimpleClasses\C5SimpleClasses.csproj", "{905C233A-AAA4-4C7F-AF05-7EDDE2D98E54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C5School", "School\C5School.csproj", "{64A95DBE-A112-4943-AB31-E3324A5935C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,14 @@ Global
 		{DC809267-641A-4605-AC12-CD19758F8DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC809267-641A-4605-AC12-CD19758F8DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC809267-641A-4605-AC12-CD19758F8DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{905C233A-AAA4-4C7F-AF05-7EDDE2D98E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905C233A-AAA4-4C7F-AF05-7EDDE2D98E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905C233A-AAA4-4C7F-AF05-7EDDE2D98E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905C233A-AAA4-4C7F-AF05-7EDDE2D98E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64A95DBE-A112-4943-AB31-E3324A5935C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64A95DBE-A112-4943-AB31-E3324A5935C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64A95DBE-A112-4943-AB31-E3324A5935C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64A95DBE-A112-4943-AB31-E3324A5935C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
