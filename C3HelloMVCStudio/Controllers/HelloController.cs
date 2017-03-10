@@ -41,6 +41,7 @@ namespace C3HelloMVC.Controllers
                 {"klingon", "nuqneH" }
             };
             string greeting = greetings[language];
+            
             return Content(string.Format("<marquee behavior='scroll' direction='left'>{0} {1}</marquee>", greeting, name), "text/html");
         }
 
