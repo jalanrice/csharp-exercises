@@ -105,13 +105,13 @@ namespace C5School
             protected internal set { roster = value; }
         }
 
-        public Dictionary<string, List<int>> StudentsEnrolled()
-        {
-            foreach (int id in roster)
-            {
-                studentsEnrolled.Add(Student.Name, Student.Gpa);
-            }
+        //public Dictionary<string, List<int>> StudentsEnrolled()
+        //{
+        //    foreach (int id in roster)
+        //    {
+        //        studentsEnrolled.Add(Student.Name, Student.Gpa);
+        //    }
 
-        }
+        //}
     }
 }

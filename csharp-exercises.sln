@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C5SimpleClasses", "SimpleCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C5School", "School\C5School.csproj", "{64A95DBE-A112-4943-AB31-E3324A5935C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C5StudioRestaurantMenu", "C5StudioRestaurantMenu\C5StudioRestaurantMenu.csproj", "{88362302-D09D-4DD1-B388-853A90F44E42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{64A95DBE-A112-4943-AB31-E3324A5935C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64A95DBE-A112-4943-AB31-E3324A5935C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64A95DBE-A112-4943-AB31-E3324A5935C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88362302-D09D-4DD1-B388-853A90F44E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88362302-D09D-4DD1-B388-853A90F44E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88362302-D09D-4DD1-B388-853A90F44E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88362302-D09D-4DD1-B388-853A90F44E42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
