@@ -20,6 +20,8 @@ namespace C5School
         private int numberOfCredits;
         private double gpa;
 
+        private static int nextStudentId = 1;
+
         public string Name
         {
             get { return name; }
@@ -43,15 +45,76 @@ namespace C5School
             get { return gpa; }
             protected internal set { gpa = value; }
         }
+        public Student(string name, int studentId, int numberOfCredits, double gpa)
+        {
+            Name = name;
+            StudentId = studentId;
+            NumberOfCredits = numberOfCredits;
+            Gpa = gpa;
+        }
+
+        public Student(string name, int studentId)
+            : this(name, studentId, 0, 0) { }
+
+        public Student(string name)
+            : this(name, nextStudentId)
+        {
+            nextStudentId++;
+        }
+
+        public void AddGrade(int courseCredits, double grade)
+        {
+            double courseQualityScore = courseCredits * grade;
+            double qualityScore = gpa * numberOfCredits;
+            qualityScore += courseQualityScore;
+            numberOfCredits += courseCredits;
+            gpa = qualityScore / numberOfCredits;
+
+        }
+
+        public string GetGradeLevel()
+        {
+            string gradeLevel = "";
+            if (numberOfCredits < 30)
+            {
+                gradeLevel = "Freshman";
+            }
+            else if (numberOfCredits < 60)
+            {
+                gradeLevel = "Sophmore";
+            }
+            else if (numberOfCredits < 90)
+            {
+                gradeLevel = "Junior";
+            }
+            else
+                gradeLevel = "Senior";
+                
+            
+            return gradeLevel;
+        }
+
+        public override String ToString()
+        {
+            return Name + " (Credits: " + NumberOfCredits + ", GPA: " + Gpa + ")";
+        }
+
+        public override bool Equals(object obj)
+        {
+            Student studentObj = obj as Student;
+
+            return studentObj.studentId == this.studentId;
+        }
+
     }
 
     public class Course
     {
         private string title;
-        private readonly Dictionary<string, int> courseId;
+        private readonly Tuple<string, int> courseId;
         private string instructor;
         private int credits;
-        private Dictionary<string, string> location;
+        private Tuple<string, int> location;
         private string description;
         private List<string> textbooks;
         private List<int> roster;
@@ -64,7 +127,7 @@ namespace C5School
             protected internal set { title = value; }
         }
 
-        public Dictionary<string, int> CourseId
+        public Tuple<string, int> CourseId
         {
             get { return courseId; }
         }
@@ -81,7 +144,7 @@ namespace C5School
             protected internal set { credits = value; }
         }
 
-        public Dictionary<string, string> Location
+        public Tuple<string, int> Location
         {
             get { return location; }
             protected internal set { location = value; }
@@ -103,6 +166,20 @@ namespace C5School
         {
             get { return roster; }
             protected internal set { roster = value; }
+        }
+
+        public override string ToString()
+        {
+            return String.Format("Course Title: {0}\nCourse Id {1}{2}\nInstructor: {3}\nCredits: {4}\nLocation: {5} room {6}\nDescription:{7}",
+                title, courseId.Item1, courseId.Item2, instructor, credits, location.Item1, location.Item2, description);
+        }
+
+
+        public override bool Equals(object obj)
+        {
+            Course courseObj = obj as Course;
+
+            return courseObj.courseId == this.courseId;
         }
 
         //public Dictionary<string, List<int>> StudentsEnrolled()
