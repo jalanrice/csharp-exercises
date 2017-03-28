@@ -12,9 +12,9 @@ namespace C9UserSignup.Controllers
     {
         public IActionResult Index()
         {
-            List<User> users = UserData.GetAll();
+            AddUserViewModel addUserViewModel = new AddUserViewModel();
 
-            return View(users);
+            return View(addUserViewModel);
         }
 
         public IActionResult Add()
@@ -38,9 +38,9 @@ namespace C9UserSignup.Controllers
             return View(addUserViewModel);
         }
 
-        public IActionResult Detail(int userId)
+        public IActionResult Detail(int id)
         {
-            ViewBag.user = UserData.GetById(userId);
+            ViewBag.user = UserData.GetById(id);
 
             return View();
         }

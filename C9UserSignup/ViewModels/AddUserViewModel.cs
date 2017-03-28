@@ -47,5 +47,7 @@ namespace C9UserSignup.ViewModels
 
         }
 
+        public List<User> users = UserData.GetAll();
+
     }
 }
