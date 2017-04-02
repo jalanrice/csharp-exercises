@@ -31,6 +31,7 @@ namespace C9UserSignup.Controllers
             if(ModelState.IsValid)
             {
                 UserData.Add(addUserViewModel.CreateUser(addUserViewModel));
+                ViewBag.username = addUserViewModel.Username;
 
                 return Redirect("/User");
             }
